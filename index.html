@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+  .story {
+    border: 1px solid gray;
+    padding: 12px;
+    margin: 12px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+</style>
+<body>
+  <div id="app">
+    <div class="story" v-for="item in stories" :key="item.id">
+      <p class="title">{{item.title}}</p>
+      <textarea v-model="item.selftext"  cols="30" rows="10"></textarea>
+      <button v-if="!isLoading" @click="createStory(item)">CREATE</button>
+      <p v-else>Processing...</p>
+    </div>
+  </div>
+  <script src="client.js"></script>
+</body>
+</html>

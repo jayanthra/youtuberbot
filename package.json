@@ -1,0 +1,24 @@
+{
+  "name": "youtuberbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "lite-server",
+    "start": "nodemon server.js && lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "reddits-api": "^1.3.7",
+    "youtube-videos-uploader": "^1.3.25"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
